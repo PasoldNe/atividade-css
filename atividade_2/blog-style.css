@@ -59,7 +59,7 @@ body {
 
 .nav a:hover {
     background: #3498db;
-    color: white;
+    color: black;
 }
 
 /* Main Content */
@@ -317,5 +317,47 @@ body {
     .author-info {
         flex-direction: column;
         text-align: center;
+    }
+}
+/* Adicionar nova media query entre as existentes */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content-wrapper {
+        gap: 2rem; /* Reduzir gap */
+    }
+    
+    .posts {
+        flex: 1.5; /* Ajustar proporção */
+    }
+    
+    .sidebar {
+        flex: 1; /* Ajustar proporção */
+    }
+    
+    .post-title {
+        font-size: 1.6rem; /* Reduzir tamanho */
+    }
+    
+    .author-info {
+        flex-direction: column; /* Empilhar em tablets */
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: row; /* ALTERAR */
+        gap: 0.3rem; /* REDUZIR */
+        padding-top: 20px; /* ADICIONAR */
+        padding-bottom: 20px; /* ADICIONAR */
+    }
+    
+    .nav a {
+        padding: 0.8rem 1rem; /* ADICIONAR */
+        border-radius: 5px; /* ADICIONAR */
+        transition: all 0.3s ease; /* ADICIONAR */
+    }
+    
+    .nav a:hover {
+        background: rgba(52, 152, 219, 0.1); /* ADICIONAR */
+        color: black;
     }
 }
